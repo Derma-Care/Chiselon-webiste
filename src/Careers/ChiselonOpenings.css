@@ -3,7 +3,8 @@
 ================================ */
 .careers-page {
   font-family: "Inter", sans-serif;
-  background: #b6f300; /* brand green */
+  background: #b6f300;
+  /* brand green */
   color: #0f172a;
 }
 
@@ -12,7 +13,7 @@
 ================================ */
 .overview {
   background: #b6f300;
-  padding: 40px 20px 80px;
+  padding: 40px 20px 0px;
   text-align: center;
 }
 
