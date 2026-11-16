@@ -1,62 +1,88 @@
 .clients-view {
-  padding: 60px 20px;
+  padding: 40px 20px 80px;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: -100px;
+  background-color: #b6f300;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
 .section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #011f4b;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #0115ae;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.highlight-text {
+  color: #007bff;
 }
 
 .clients-view p {
-  margin-bottom: 40px;
-  color: #555;
-  font-size: 1rem;
+  margin-bottom: 35px;
+  color: #2e384d;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===== Logos Grid ===== */
 .logos-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* mobile default */
-  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
   justify-items: center;
   align-items: center;
 }
 
-@media (min-width: 600px) {
-  .logos-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 900px) {
-  .logos-container {
-    grid-template-columns: repeat(6, 1fr);
-  }
+.client-logo {
+  padding: 0.85rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  width: 100%;
+  max-width: 165px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .client-logo img {
   max-width: 100%;
   max-height: 80px;
+  width: auto;
+  height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
   animation: float 4s ease-in-out infinite;
 }
 
 /* Hover effect */
-.client-logo img:hover {
-  transform: scale(1.1) rotate(-5deg);
+.client-logo:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: #ffffff;
+  box-shadow: 0 10px 22px rgba(1, 21, 174, 0.15);
+  border-color: #0115ae;
+}
+
+.client-logo:hover img {
+  transform: scale(1.08);
   cursor: pointer;
-  animation-play-state: paused; /* pause float on hover */
+  animation-play-state: paused;
 }
 
 /* Floating animation */
@@ -65,23 +91,54 @@
     transform: translateY(0px);
   }
   25% {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
   }
   50% {
     transform: translateY(0px);
   }
   75% {
-    transform: translateY(8px);
+    transform: translateY(5px);
   }
   100% {
     transform: translateY(0px);
   }
 }
 
-/* Optional: stagger floating speed slightly */
 .client-logo:nth-child(odd) img {
   animation-duration: 3.5s;
 }
 .client-logo:nth-child(even) img {
   animation-duration: 4.5s;
+}
+
+@media (max-width: 1024px) {
+  .logos-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .logos-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .clients-view p {
+    font-size: 0.85rem;
+  }
+
+  .client-logo {
+    padding: 0.6rem;
+    height: 90px;
+    max-width: 140px;
+  }
+
+  .client-logo img {
+    max-height: 65px;
+  }
 }
