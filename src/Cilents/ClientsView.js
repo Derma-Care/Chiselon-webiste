@@ -6,8 +6,33 @@ import ACSLogo from "../Assests/ACG.png";
 import RPWebAppsLogo from "../Assests/rpwebapps.png";
 import ExwynLogo from "../Assests/Exwyn.png";
 
+// Healthcare & Physiotherapy Clinic Client Logos
+import Physio1Logo from "../Assests/client_physio_1.png";
+import Physio2Logo from "../Assests/client_physio_2.png";
+import Physio3Logo from "../Assests/client_physio_3_clean.png";
+import Physio4Logo from "../Assests/client_physio_4_clean.png";
+import Physio5Logo from "../Assests/client_physio_5.png";
+import Physio6Logo from "../Assests/client_physio_6.png";
+import Physio7Logo from "../Assests/client_physio_7_clean.png";
+import Physio8Logo from "../Assests/client_physio_8_clean.png";
+import Physio9Logo from "../Assests/client_physio_9_clean.png";
+import Physio10Logo from "../Assests/client_physio_10_clean.png";
+
 const ClientsView = () => {
   const clientsList = [
+    // 1st to 10th logos with exact requested names
+    { name: "PhysioMax", logo: Physio1Logo },
+    { name: "Physio Health care International", logo: Physio2Logo },
+    { name: "Revivew physiotherapy", logo: Physio3Logo },
+    { name: "Neuro N rehab", logo: Physio4Logo },
+    { name: "kinetix wellness care", logo: Physio5Logo },
+    { name: "Selvi Physiotheraphy", logo: Physio6Logo },
+    { name: "Gowtham Advanced Physiotherapy & Rehab Center", logo: Physio7Logo },
+    { name: "Dr. Arthy Physio", logo: Physio8Logo },
+    { name: "PhysioFit", logo: Physio9Logo },
+    { name: "Dr. Renu's Physiotheraphy", logo: Physio10Logo },
+
+    // Existing Enterprise Clients
     { name: "AppOrchid", logo: "https://cdn.prod.website-files.com/6308b9e1771b56be92fe7491/637b3fe87b64e734fde7115c_apporchid.png" },
     { name: "Reveal Data", logo: "https://cdn.us.document360.io/logo/3e21d801-ca9f-4c51-93db-9cbd32741f3d/6d8c0747514548729b40b75d0ae1663d-REVEAL%20LOGO%20-%20PLUM(3).png" },
     { name: "IntraEdge", logo: "https://apn-portal.my.salesforce.com/servlet/servlet.ImageServer?id=0150h000003PpPNAA0&oid=00DE0000000c48tMAA" },
@@ -25,9 +50,11 @@ const ClientsView = () => {
   return (
     <section className="clients-view">
       <div className="container">
-        <h2 className="section-title">Our Esteemed Clients</h2>
-        <p>{clientsList.map(client => client.name).join(", ")}</p>
-        
+        <h2 className="section-title">
+          OUR ESTEEMED <span className="highlight-text">CLIENTS</span>
+        </h2>
+        <p>{clientsList.map((client) => client.name).join(", ")}</p>
+
         <div className="logos-container">
           {clientsList.map((client, index) => (
             <div key={index} className="client-logo">

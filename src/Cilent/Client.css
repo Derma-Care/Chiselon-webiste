@@ -8,7 +8,7 @@
 html, body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #b6f300;
 }
@@ -16,33 +16,43 @@ html, body {
 /* Section styling */
 .clients-section {
   width: 100%;
-  padding: 3rem 1rem;
+  padding: 3.5rem 1rem 5rem;
   background-color: #b6f300;
-  overflow-x: hidden; /* Extra safety */
+  overflow-x: hidden;
 }
 
 /* Container styling */
 .clients-container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
   text-align: center;
-  padding: 0 1rem; /* Prevent edge overflow */
+  padding: 0 1rem;
 }
 
 /* Title styling */
 .section-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 1rem;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #0115ae;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.highlight-text {
+  color: #007bff;
 }
 
 /* Client names paragraph */
 .clients-names {
-  font-size: 1rem;
-  color: #555;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2e384d;
   margin-bottom: 2.5rem;
   line-height: 1.6;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Logo grid: 6 per row on large screens */
@@ -56,29 +66,47 @@ html, body {
 
 /* Individual logo styling */
 .client-logo {
-  padding: 0.75rem;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.85rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   width: 100%;
-  max-width: 150px;
+  max-width: 165px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .client-logo img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 80px;
+  width: auto;
   height: auto;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 /* Hover effect */
 .client-logo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px) scale(1.05);
+  background: #ffffff;
+  box-shadow: 0 10px 22px rgba(1, 21, 174, 0.15);
+  border-color: #0115ae;
 }
 
-/* Tablets: 3 logos per row */
+.client-logo:hover img {
+  transform: scale(1.08);
+}
+
+/* Tablets: 3-4 logos per row */
 @media (max-width: 1024px) {
   .clients-logos {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
   }
 }
 
@@ -86,6 +114,7 @@ html, body {
 @media (max-width: 600px) {
   .clients-logos {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .section-title {
@@ -97,11 +126,16 @@ html, body {
   }
 
   .clients-section {
-    padding: 2rem 0.5rem;
+    padding: 2rem 0.5rem 3.5rem;
   }
 
   .client-logo {
-    padding: 0.5rem;
-    max-width: 120px;
+    padding: 0.6rem;
+    height: 90px;
+    max-width: 140px;
+  }
+
+  .client-logo img {
+    max-height: 65px;
   }
 }
