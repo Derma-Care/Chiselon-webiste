@@ -289,12 +289,7 @@ const ProductsSection = ({ onSpecChange }) => {
               </h1>
 
               <p className="pes-spec-hero-company">
-                Developed by <strong>Chiselon Technologies Private Limited</strong> ·{" "}
-                <span className="version-tag">
-                  {isEnterprise
-                    ? "CTPL-ENT-v4.6.1-ENTERPRISE"
-                    : "CTPL-ESS-v4.2.8-STABLE"}
-                </span>
+                Developed by <strong>Chiselon Technologies Private Limited</strong>
               </p>
 
               <h2 className="pes-spec-hero-tagline">
