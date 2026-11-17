@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a5df3c96.css",
-    "main.js": "/static/js/main.eb01e462.js",
+    "main.js": "/static/js/main.ae1388b2.js",
     "static/media/doctor_app.mp4": "/static/media/doctor_app.dda0a0f3700340c38955.mp4",
     "static/media/clinic_essentials.jpg": "/static/media/clinic_essentials.318ae9aceb0f6b615bb4.jpg",
     "static/media/clinic_enterprise.jpg": "/static/media/clinic_enterprise.c5d5b64c4f8ad53401da.jpg",
@@ -58,10 +58,10 @@
     "static/media/Exwyn.png": "/static/media/Exwyn.839c4be6ca5ce4168edb.png",
     "index.html": "/index.html",
     "main.a5df3c96.css.map": "/static/css/main.a5df3c96.css.map",
-    "main.eb01e462.js.map": "/static/js/main.eb01e462.js.map"
+    "main.ae1388b2.js.map": "/static/js/main.ae1388b2.js.map"
   },
   "entrypoints": [
     "static/css/main.a5df3c96.css",
-    "static/js/main.eb01e462.js"
+    "static/js/main.ae1388b2.js"
   ]
 }
